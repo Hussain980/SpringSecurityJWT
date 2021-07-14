@@ -31,6 +31,11 @@ public class UserController {
 	public String home() {
 		return "welcome to spring security jwt";
 	}
+	
+	@GetMapping("/welcome")
+	public String demo() {
+		return "this will work without spring security";
+	}
 
 	@PostMapping("/authenticate")
 	public JwtResponse authenticate(@RequestBody JwtRequest jwtRequest) throws Exception {
